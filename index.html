@@ -20,7 +20,6 @@
             --error-bg: #5c1d16;
             --error-border: #a33224;
         }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
@@ -32,7 +31,6 @@
             align-items: center;
             min-height: 100vh;
         }
-
         .calculator-card {
             background-color: var(--card-bg);
             border: 2px solid var(--border-gold);
@@ -43,7 +41,6 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.5);
             box-sizing: border-box;
         }
-
         .lang-switch {
             display: flex;
             justify-content: space-between;
@@ -52,7 +49,6 @@
             border-bottom: 1px dashed var(--border-gold);
             padding-bottom: 15px;
         }
-
         .lang-btn {
             flex: 1;
             background: linear-gradient(135deg, rgba(45,30,22,0.6) 0%, rgba(30,20,15,0.8) 100%);
@@ -66,14 +62,12 @@
             text-align: center;
             transition: all 0.3s ease;
         }
-
         .lang-btn.active {
             background: linear-gradient(135deg, var(--light-brown) 0%, #442d1f 100%);
             color: var(--text-light);
             border-color: var(--primary-gold);
             box-shadow: 0 0 10px rgba(197, 160, 89, 0.4);
         }
-
         .header-title {
             text-align: center;
             color: var(--primary-gold);
@@ -83,11 +77,7 @@
             border-bottom: 1px solid var(--border-gold);
             padding-bottom: 10px;
         }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
+        .form-group { margin-bottom: 20px; }
         label {
             display: block;
             margin-bottom: 8px;
@@ -95,7 +85,6 @@
             font-size: 16px;
             font-weight: 500;
         }
-
         input[type="date"] {
             width: 100%;
             padding: 12px;
@@ -107,12 +96,7 @@
             box-sizing: border-box;
             text-align: right;
         }
-
-        .btn-group {
-            display: flex;
-            gap: 12px;
-        }
-
+        .btn-group { display: flex; gap: 12px; }
         .option-btn {
             flex: 1;
             background: linear-gradient(135deg, rgba(45,30,22,0.6) 0%, rgba(30,20,15,0.8) 100%);
@@ -129,19 +113,13 @@
             gap: 10px;
             transition: all 0.25s ease;
         }
-
-        .option-btn:hover {
-            border-color: var(--primary-gold);
-            color: var(--text-light);
-        }
-
+        .option-btn:hover { border-color: var(--primary-gold); color: var(--text-light); }
         .option-btn.active {
             background: linear-gradient(135deg, var(--light-brown) 0%, #442d1f 100%);
             color: var(--text-light);
             border-color: var(--primary-gold);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
-
         .radio-circle {
             width: 14px;
             height: 14px;
@@ -151,7 +129,6 @@
             position: relative;
             flex-shrink: 0;
         }
-
         .option-btn.active .radio-circle::after {
             content: '';
             width: 8px;
@@ -163,19 +140,8 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-
-        .radio-stack {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .radio-stack .option-btn {
-            justify-content: flex-start;
-            padding: 16px;
-            text-align: initial;
-        }
-
+        .radio-stack { display: flex; flex-direction: column; gap: 10px; }
+        .radio-stack .option-btn { justify-content: flex-start; padding: 16px; text-align: initial; }
         .submit-btn, .action-btn {
             width: 100%;
             background: linear-gradient(135deg, var(--light-brown) 0%, #442d1f 100%);
@@ -190,23 +156,9 @@
             transition: all 0.2s;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
-
-        .submit-btn:hover, .action-btn:hover {
-            filter: brightness(1.15);
-            border-color: var(--primary-gold);
-        }
-
-        .action-btn {
-            font-size: 16px;
-            padding: 12px;
-            margin-top: 12px;
-        }
-
-        .restrictions-btn {
-            background: linear-gradient(135deg, #442d1f 0%, #1e140f 100%);
-            border-color: var(--border-gold);
-        }
-
+        .submit-btn:hover, .action-btn:hover { filter: brightness(1.15); border-color: var(--primary-gold); }
+        .action-btn { font-size: 16px; padding: 12px; margin-top: 12px; }
+        .restrictions-btn { background: linear-gradient(135deg, #442d1f 0%, #1e140f 100%); border-color: var(--border-gold); }
         .error-container {
             background-color: var(--error-bg);
             border: 1px solid var(--error-border);
@@ -218,131 +170,301 @@
             text-align: center;
             font-weight: bold;
         }
-
-        .result-container {
-            margin-top: 25px;
-            border-top: 2px dashed var(--border-gold);
-            padding-top: 20px;
-            display: none;
-        }
-
-        .result-box {
-            background-color: var(--bg-color);
-            border: 1px solid var(--primary-gold);
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 15px;
-        }
-
-        .result-date {
-            font-size: 18px;
-            color: var(--primary-gold);
-            font-weight: bold;
-            text-align: center;
-            line-height: 1.6;
-        }
-
-        .note-box {
-            background-color: #261912;
-            border-right: 4px solid var(--primary-gold);
-            padding: 15px;
-            font-size: 15px;
-            line-height: 1.8;
-            color: var(--text-muted);
-            text-align: justify;
-            margin-bottom: 15px;
-            white-space: pre-line;
-        }
-
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.55); 
-            backdrop-filter: blur(3px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-            padding: 15px;
-            box-sizing: border-box;
-        }
-
-        .modal-overlay.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .modal-content {
-            background-color: var(--modal-bg); 
-            border: 2px solid var(--primary-gold);
-            border-radius: 14px;
-            width: 100%;
-            max-width: 440px;
-            padding: 22px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-            position: relative;
-            box-sizing: border-box;
-            max-height: 75vh;
-            overflow-y: auto;
-        }
-
-        .modal-title {
-            color: var(--bright-gold); 
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 18px;
-            border-bottom: 1px solid var(--border-gold);
-            padding-bottom: 8px;
-            text-align: center;
-        }
-
-        .modal-item-box {
-            background-color: var(--modal-box); 
-            border: 1px solid rgba(197, 160, 89, 0.4); 
-            border-radius: 8px;
-            padding: 14px;
-            margin-bottom: 12px;
-            font-size: 14.5px;
-            line-height: 1.8;
-            color: var(--text-cream); 
-            text-align: justify;
-        }
-
-        .modal-item-title {
-            color: var(--bright-gold);
-            font-weight: bold;
-            margin-bottom: 6px;
-            font-size: 15.5px;
-        }
-
-        .close-modal-btn {
-            width: 100%;
-            background: linear-gradient(135deg, var(--light-brown) 0%, #442d1f 100%);
-            color: var(--text-light);
-            border: 1.5px solid var(--primary-gold);
-            padding: 12px;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-top: 15px;
-            font-weight: bold;
-            font-size: 16px;
-            transition: all 0.2s;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-        }
-
-        .close-modal-btn:hover {
-            filter: brightness(1.15);
-        }
-
+        .result-container { margin-top: 25px; border-top: 2px dashed var(--border-gold); padding-top: 20px; display: none; }
+        .result-box { background-color: var(--bg-color); border: 1px solid var(--primary-gold); border-radius: 8px; padding: 15px; margin-bottom: 15px; }
+        .result-date { font-size: 18px; color: var(--primary-gold); font-weight: bold; text-align: center; line-height: 1.6; }
+        .note-box { background-color: #261912; border-right: 4px solid var(--primary-gold); padding: 15px; font-size: 15px; line-height: 1.8; color: var(--text-muted); text-align: justify; margin-bottom: 15px; white-space: pre-line; }
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.55); backdrop-filter: blur(3px); display: flex; justify-content: center; align-items: center; z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; padding: 15px; box-sizing: border-box; }
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+        .modal-content { background-color: var(--modal-bg); border: 2px solid var(--primary-gold); border-radius: 14px; width: 100%; max-width: 440px; padding: 22px; box-shadow: 0 20px 50px rgba(0,0,0,0.8); position: relative; box-sizing: border-box; max-height: 75vh; overflow-y: auto; }
+        .modal-title { color: var(--bright-gold); font-size: 20px; font-weight: bold; margin-bottom: 18px; border-bottom: 1px solid var(--border-gold); padding-bottom: 8px; text-align: center; }
+        .modal-item-box { background-color: var(--modal-box); border: 1px solid rgba(197, 160, 89, 0.4); border-radius: 8px; padding: 14px; margin-bottom: 12px; font-size: 14.5px; line-height: 1.8; color: var(--text-cream); text-align: justify; }
+        .modal-item-title { color: var(--bright-gold); font-weight: bold; margin-bottom: 6px; font-size: 15.5px; }
+        .close-modal-btn { width: 100%; background: linear-gradient(135deg, var(--light-brown) 0%, #442d1f 100%); color: var(--text-light); border: 1.5px solid var(--primary-gold); padding: 12px; border-radius: 6px; cursor: pointer; margin-top: 15px; font-weight: bold; font-size: 16px; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+        .close-modal-btn:hover { filter: brightness(1.15); }
         .hidden { display: none !important; }
     </style>
 </head>
 <body>
-
 <div class="calculator-card">
+    <div class="lang-switch">
+        <button class="lang-btn active" id="btn-ur" onclick="changeLang('ur')">اردو</button>
+        <button class="lang-btn" id="btn-roman" onclick="changeLang('roman')">Roman Urdu</button>
+        <button class="lang-btn" id="btn-hindi" onclick="changeLang('hindi')">Hindi</button>
+        <button class="lang-btn" id="btn-en" onclick="changeLang('en')">English</button>
+    </div>
+    <div class="header-title" id="lbl-title">عدت کیلکولیٹر</div>
+    <div class="form-group">
+        <label id="lbl-iddah-type">عدت کی قسم منتخب کیجئے</label>
+        <div class="btn-group">
+            <button class="option-btn" id="type-death" onclick="selectIddahType('death')">
+                <span class="radio-circle"></span><span id="lbl-type-death">عدتِ وفات</span>
+            </button>
+            <button class="option-btn" id="type-divorce" onclick="selectIddahType('divorce')">
+                <span class="radio-circle"></span><span id="lbl-type-divorce">عدتِ طلاق</span>
+            </button>
+        </div>
+    </div>
+    <div id="dynamic-flow-inputs">
+        <div class="form-group hidden" id="group-date">
+            <label id="lbl-date-input">براہ کرم تاریخ درج کریں</label>
+            <input type="date" id="event-date" onchange="resetResult()">
+        </div>
+        <div class="form-group hidden" id="group-khilwat">
+            <label id="lbl-khilwat">کیا خلوتِ صحیحہ ہوئی ہے؟</label>
+            <div class="btn-group">
+                <button class="option-btn" id="khilwat-yes" onclick="selectKhilwat(true)">
+                    <span class="radio-circle"></span><span id="lbl-yes-1">جی ہاں</span>
+                </button>
+                <button class="option-btn" id="khilwat-no" onclick="selectKhilwat(false)">
+                    <span class="radio-circle"></span><span id="lbl-no-1">جی نہیں</span>
+                </button>
+            </div>
+        </div>
+        <div class="form-group hidden" id="group-pregnancy">
+            <label id="lbl-pregnancy">کیا مطلقہ حمل سے ہے؟</label>
+            <div class="btn-group">
+                <button class="option-btn" id="preg-yes" onclick="selectPregnancy(true)">
+                    <span class="radio-circle"></span><span id="lbl-yes-2">جی ہاں</span>
+                </button>
+                <button class="option-btn" id="preg-no" onclick="selectPregnancy(false)">
+                    <span class="radio-circle"></span><span id="lbl-no-2">جی نہیں</span>
+                </button>
+            </div>
+        </div>
+        <div class="form-group hidden" id="group-menses">
+            <label id="lbl-menses">ماہواری کا کیا نظام ہے؟</label>
+            <div class="radio-stack">
+                <button class="option-btn" id="menses-stopped" onclick="selectMenses('stopped')">
+                    <span class="radio-circle"></span><span id="lbl-menses-stop">عمر رسیدہ ہونے کی وجہ سے ماہواری کا نظام بند ہے۔</span>
+                </button>
+                <button class="option-btn" id="menses-active" onclick="selectMenses('active')">
+                    <span class="radio-circle"></span><span id="lbl-menses-go">جاری ہے</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="error-container" id="error-box">براہ کرم نتیجہ دیکھنے سے پہلے تمام سوالات کے جوابات منتخب کریں۔</div>
+    <button class="submit-btn hidden" id="btn-submit" onclick="calculateIddah()">نتیجه دیکھیں</button>
+    <div class="result-container" id="result-panel">
+        <div class="result-box">
+            <div class="result-date" id="txt-final-result"></div>
+        </div>
+        <div class="note-box hidden" id="box-jurisprudence-notes"></div>
+        <button class="action-btn" id="btn-share" onclick="shareResult()">نتیجہ شیئر کریں</button>
+        <button class="action-btn restrictions-btn" id="btn-restrict" onclick="openModal()">عدت کی پابندیاں ملاحظہ فرمائیں</button>
+    </div>
+</div>
+<div class="modal-overlay" id="pabandi-modal">
+    <div class="modal-content">
+        <div class="modal-title" id="modal-heading">عدت کی شرعی پابندیاں</div>
+        <div class="modal-text-container" id="modal-text-container"></div>
+        <button class="close-modal-btn" id="btn-close-modal" onclick="closeModal()">بند کریں</button>
+    </div>
+</div>
+<script>
+    const langData = {
+        ur: {
+            title: "عدت کیلکولیٹر", iddahType: "عدت کی قسم منتخب کیجئے", death: "عدتِ وفات", divorce: "عدتِ طلاق",
+            dateDeath: "براہ کرم شوہر کے انتقال کی تاریخ درج کریں", dateDivorce: "براہ کرم طلاق کی تاریخ درج کریں",
+            khilwat: "کیا خلوتِ صحیحہ ہوئی ہے؟", yes: "جی ہاں", no: "جی نہیں", preg: "کیا مطلقہ حمل سے ہے؟",
+            menses: "ماہواری کا کیا نظام ہے؟", mensesStop: "عمر رسیدہ ہونے کی وجہ سے ماہواری کا نظام بند ہے۔", mensesGo: "جاری ہے",
+            submit: "نتیجہ دیکھیں", error: "براہ کرم نتیجہ دیکھنے سے پہلے تمام سوالات کے جوابات منتخب کریں۔",
+            share: "نتیجہ شیئر کریں", restrictBtn: "عدت کی پابندیاں ملاحظہ فرمائیں", close: "بند کریں",
+            noIddah: "ایسی عورت کی کوئی عدت نہیں ہوتی۔",
+            pregResult: "ایسی عورت کی عدت وضع حمل (بچے کی پیدائش) پر ختم ہوگی۔",
+            mensesActiveResult: "ایسی عورت کی عدت تین کامل ماہواری گزرنے پر ختم ہوتی ہے۔ جب بھی تین ماہوریاں گزریں گی عدت ختم ہو جائے گی، چاہے اس میں تین ماہ لگیں یا ماہواری کا نظام درست نہ ہونے کی صورت میں زیادہ وقت لگے۔ لیکن اتنا ضرور دھیان رہے کہ جب تک کامل تین ماہواریاں نہ گزر جائیں، عدت ختم نہ ہوگی۔",
+            endSentence: "گزارنے کے بعد عدت ختم ہو جائے گی۔", modalTitle: "عدت کی شرعی پابندیاں",
+            deathNote: "ملاحظہ: یہ اس وقت ہے جب کہ کسی کے شوہر کا انتقال چاند کی پہلی تاریخ کے علاوہ ہوا ہو۔ اگر چاند کی پہلی تاریخ کو انتقال ہوا ہو تو ۱۳۰ دن شمار نہیں کئے جائیں گے بلکہ چار ماہ (مہینہ خواہ ۲۹ دن کا ہو یا ۳۰دن کا ) اور مزید دس دن عدت کے ہونگے ،یعنی چار ماہ دس دن کےبعد عدت ختم ہو جائے گی۔",
+            divorceNotes: "ملاحظہ:\n۱- اگر کسی کے شوہر نے ماہواری کے دوران ہی طلاق دی ہے تو طلاق والی ماہواری کا اعتبار نہیں ہوگا بلکہ اس کے علاوہ مزید تین ماہواری گزرنے کے بعد ہی عدت ختم ہوگی۔\n۲- اگر کسی کی ماہواری کا نظام درست نہیں ہے ،(کچھ دنوں یاکچھ ماہ سےبندہے) تو اسے چاہئے کہ وہ علاج و معالجہ کرے نیزجب تک کہ تین کامل ماہواری گزر نہ جائیں اس وقت تک عدت ختم نہ ہوگی۔\n۳ - طلاق کے بعد ماہواری آنا بند ہو گئی اور ( معاملہ مشکوک ہے یعنی عورت عمر کےاس دور میں ہے کہ جسمیں یہ یقینی نہیں ہے کہ ماہواری عارضی طور پر بند ہوئی ہے یا عمر کی زیادتی کی وجہ سے مستقلاً بند ہو گئی ہے) علاج کے بعد بھی ماہواری نہیں آئی تومفتیٰ بہٖ قول کے مطابق ۹ ماہ تک ماہواری کا انتظار کرے اور اگر علاج و معالجہ کی حجت ہو تو علاج کرے اگر دوران انتظار ماہواری آ جائے تو اب تین ماہواری کے بعد عدت ختم ہوجائےگی اگر پھر بھی نہ آئے تو ماہ انتظار کے بعد اب یہ سمजھے کہ ماہواری کا سلسلہ ہمیشہ کے لئے بند ہو گیا ہے، اب مزید ۹۰ دن گزرنے کے بعد عدت ختم ہو جائے گی۔\nمحمد مجاہدخیرآبادی غفر لہٗ",
+            rules: [
+                { t: "1. گھر سے بلا ضرورت باہر نکلنے کی ممانعت", d: "معتدہ (عدت گزارنے والی عورت) کے لیے بلا ضرورت شدید گھر سے نکلنا، سفر کرنا یا رات کسی دوسرے گھر میں گزارنا جائز نہیں۔" },
+                { t: "2. زینت و سنگھار اور خوشبو کی ممانعت (سوگ / احداد)", d: "شوہر کی وفات کی عدت में سوگ منانا واجب ہے۔ بناؤ سنگھار، زیورات، ریشمی اور شوخ و چمکدار لباس، خوشبو لگانا, مہندی لگانا، سرمہ اور کاجل کا بلا عذر استعمال ممنوع ہے۔ سادہ اور صاف لباس زیب تن کیا جائے۔" },
+                { t: "3. نکاح اور نکاح کا پیغام ممنوع", d: "عدت کے دوران کسی دوسرے مرد سے نکاح کرنا قطعی حرام اور باطل ہے۔ حتیٰ کہ صراحتًا نکاح کا پیغام (پیامِ نکاح) دینا یا قبول کرنا بھی شرعاً منع ہے۔" },
+                { t: "4. سکونت کا حکم", d: "عدت اسی گھر میں گزاری جائے گی جہاں شوہر کے انتقال یا طلاق کے وقت وہ مقیم تھی۔ بلا عذرِ شرعی مکان تبدیل کرنا جائز نہیں۔" }
+            ]
+        },
+        roman: {
+            title: "Iddah Calculator", iddahType: "Select Iddah Type", death: "Iddah-e-Wafat", divorce: "Iddah-e-Talaq",
+            dateDeath: "Shohar ke intiqal ki tareekh darj karein", dateDivorce: "Talaq ki tareekh darj karein",
+            khilwat: "Kya Khilwat-e-Saheha hui hai?", yes: "Ji Haan", no: "Ji Nahi", preg: "Kya mutallqa hamal se hai?",
+            menses: "Mahwari ka kya nizam hai?", mensesStop: "Umar raseeda hone ki wajah se mahwari band hai.", mensesGo: "Jari hai",
+            submit: "Nateeja Dekhein", error: "Baraye karam pehle tamam sawalat ke jawabat muntakhab karein.",
+            share: "Share Result", restrictBtn: "Iddah ki pabandiyan mulahiza farmayein", close: "Band Karein",
+            noIddah: "Aisi aurat ki koi iddah nahi hoti.",
+            pregResult: "Aisi aurat ki iddah waza-e-hamal par khatam hogi.",
+            mensesActiveResult: "Iddah 3 kaamil mahwari guzarne par khatam hoti hai.",
+            endSentence: "guzarne ke baad Iddah khatam ho jayegi.", modalTitle: "Iddah Ki Pabandiyan",
+            deathNote: "Note: Demise lunar calendar rules apply.",
+            divorceNotes: "Note: Sharia rules apply. - M. Mujahid Khairabadi",
+            rules: [
+                { t: "1. Restriction on Leaving", d: "Bila zaroorat ghar se nikalna ya safar karna jaiz nahi hai." },
+                { t: "2. Avoidance of Adornments", d: "Khushboo, zeewar, mehndi aur libas mana hai." }
+            ]
+        },
+        hindi: {
+            title: "इद्दत कैलकुलेटर", iddahType: "इद्दत की किस्म मुंतखब कीजिए", death: "इद्दत-ए-वफ़ात", divorce: "इद्दत-ए-तलाक़",
+            dateDeath: "बराय करम शौहर के इंतिकाल की तारीख दर्ज करें", dateDivorce: "बराय करम तलाक़ की तारीख दर्ज करें",
+            khilwat: "क्या ख़लवत-ए-सहीहा हुई है?", yes: "जी हाँ", no: "जी नहीं", preg: "क्या मुतल्लका हमल से है?",
+            menses: "माहवारी का क्या निज़ाम है?", mensesStop: "उम्र रसीदा होने की वजह से माहवारी का निज़ाम बंद है।", mensesGo: "जारी है",
+            submit: "परिणाम देखें", error: "बराय करम परिणाम देखने से पहले तमाम सवालात के जवाबात मुंतखब करें।",
+            share: "शेयर परिणाम", restrictBtn: "इद्दत की पाबंदियां मुलाहिज़ा फरमाएं", close: "बंद करें",
+            noIddah: "ऐसी औरत की कोई इद्दत नहीं होती।",
+            pregResult: "ऐसी औरत की इद्दत वज़ह-ए-हमल पर ख़त्म होगी।",
+            mensesActiveResult: "ऐसी औरत की इद्दत तीन कामिल माहवारी गुज़रने पर ख़त्म होती है।",
+            endSentence: "गुज़रने के बाद इद्दत ख़त्म हो जाएगी।", modalTitle: "इद्दत की पाबंदियां",
+            deathNote: "मुलाहिज़ा: चाँद की पहली तारीख के अलावा नियमों का विवरण लागू होता है।",
+            divorceNotes: "मुलाहिज़ा: फ़िक़्ह के नियम लागू हैं। - मोहम्मद मुजाहिद ख़ैराबादी",
+            rules: [
+                { t: "1. घर से बाहर निकलने की मनाही", d: "बिला ज़रूरत शदीद घर से निकलना या सफ़र करना जाइज़ नहीं।" },
+                { t: "2. बनाओ-सिंगार की मनाही", d: "ज़ेवरात, ख़ुशबू, मेहँदी और भड़कीले लिबास से परहेज़ लाज़मी है।" }
+            ]
+        },
+        en: {
+            title: "Iddah Calculator", iddahType: "Select the Type of Iddah", death: "Iddah of Death", divorce: "Iddah of Divorce",
+            dateDeath: "Enter husband's demise date", dateDivorce: "Enter divorce date",
+            khilwat: "Did Khilwat-e-Saheha take place?", yes: "Yes", no: "No", preg: "Is the divorcee pregnant?",
+            menses: "What is the menstrual cycle condition?", mensesStop: "Menopause reached.", mensesGo: "Active / Regular",
+            submit: "View Result", error: "Please answer all required questions first.",
+            share: "Share Result", restrictBtn: "View Iddah Restrictions", close: "Close",
+            noIddah: "No Iddah period required.",
+            pregResult: "Iddah ends upon the delivery of the child.",
+            mensesActiveResult: "Iddah lasts for 3 complete menstrual cycles.",
+            endSentence: "the Iddah period will officially end.", modalTitle: "Sharia Restrictions During Iddah",
+            deathNote: "Note: Demise date conditions based on lunar calendar apply.",
+            divorceNotes: "Note: Sharia directives apply. - M. Mujahid Khairabadi",
+            rules: [
+                { t: "1. Restriction on Leaving the House", d: "Leaving the home without urgent necessity or spending nights outside is invalid." },
+                { t: "2. Prohibition of Adornment", d: "Perfumes, jewelry, henna, and glamorous clothing must be avoided." }
+            ]
+        }
+    };
+
+    let currentLang = 'ur';
+    let iddahType = null;
+    let khilwat = null;
+    let pregnancy = null;
+    let menses = null;
+
+    function changeLang(lang) {
+        currentLang = lang;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(`btn-${lang}`).classList.add('active');
+        document.body.dir = (lang === 'en' || lang === 'roman') ? "ltr" : "rtl";
+        document.getElementById('event-date').style.textAlign = (lang === 'en' || lang === 'roman') ? "left" : "right";
+        document.getElementById('lbl-title').innerText = langData[lang].title;
+        document.getElementById('lbl-iddah-type').innerText = langData[lang].iddahType;
+        document.getElementById('lbl-type-death').innerText = langData[lang].death;
+        document.getElementById('lbl-type-divorce').innerText = langData[lang].divorce;
+        document.getElementById('lbl-yes-1').innerText = langData[lang].yes;
+        document.getElementById('lbl-no-1').innerText = langData[lang].no;
+        document.getElementById('lbl-yes-2').innerText = langData[lang].yes;
+        document.getElementById('lbl-no-2').innerText = langData[lang].no;
+        document.getElementById('lbl-menses-stop').innerText = langData[lang].mensesStop;
+        document.getElementById('lbl-menses-go').innerText = langData[lang].mensesGo;
+        document.getElementById('btn-submit').innerText = langData[lang].submit;
+        document.getElementById('btn-share').innerText = langData[lang].share;
+        document.getElementById('btn-restrict').innerText = langData[lang].restrictBtn;
+        document.getElementById('btn-close-modal').innerText = langData[lang].close;
+        document.getElementById('modal-heading').innerText = langData[lang].modalTitle;
+        updateDynamicLabels();
+        resetResult();
+    }
+    function updateDynamicLabels() {
+        if(iddahType === 'death') {
+            document.getElementById('lbl-date-input').innerText = langData[currentLang].dateDeath;
+        } else {
+            document.getElementById('lbl-date-input').innerText = langData[currentLang].dateDivorce;
+        }
+        document.getElementById('lbl-khilwat').innerText = langData[currentLang].khilwat;
+        document.getElementById('lbl-pregnancy').innerText = langData[currentLang].preg;
+        document.getElementById('lbl-menses').innerText = langData[currentLang].menses;
+    }
+    function selectIddahType(type) {
+        iddahType = type;
+        document.getElementById('type-death').classList.toggle('active', type === 'death');
+        document.getElementById('type-divorce').classList.toggle('active', type === 'divorce');
+        khilwat = pregnancy = menses = null;
+        document.querySelectorAll('#dynamic-flow-inputs .option-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById('group-date').classList.remove('hidden');
+        document.getElementById('btn-submit').classList.remove('hidden');
+        if(type === 'death') {
+            document.getElementById('group-khilwat').classList.add('hidden');
+            document.getElementById('group-pregnancy').classList.add('hidden');
+            document.getElementById('group-menses').classList.add('hidden');
+        } else {
+            document.getElementById('group-khilwat').classList.remove('hidden');
+            document.getElementById('group-pregnancy').classList.add('hidden');
+            document.getElementById('group-menses').classList.add('hidden');
+        }
+        updateDynamicLabels();
+        resetResult();
+    }
+    function selectKhilwat(val) {
+        khilwat = val;
+        document.getElementById('khilwat-yes').classList.toggle('active', val === true);
+        document.getElementById('khilwat-no').classList.toggle('active', val === false);
+        pregnancy = menses = null;
+        document.querySelectorAll('#group-pregnancy .option-btn, #group-menses .option-btn').forEach(b => b.classList.remove('active'));
+        if(val === true) {
+            document.getElementById('group-pregnancy').classList.remove('hidden');
+            document.getElementById('group-menses').classList.add('hidden');
+        } else {
+            document.getElementById('group-pregnancy').classList.add('hidden');
+            document.getElementById('group-menses').classList.add('hidden');
+        }
+        resetResult();
+    }
+    function selectPregnancy(val) {
+        pregnancy = val;
+        document.getElementById('preg-yes').classList.toggle('active', val === true);
+        document.getElementById('preg-no').classList.toggle('active', val === false);
+        menses = null;
+        document.querySelectorAll('#group-menses .option-btn').forEach(b => b.classList.remove('active'));
+        if(val === false) {
+            document.getElementById('group-menses').classList.remove('hidden');
+        } else {
+            document.getElementById('group-menses').classList.add('hidden');
+        }
+        resetResult();
+    }
+    function selectMenses(type) {
+        menses = type;
+        document.getElementById('menses-stopped').classList.toggle('active', type === 'stopped');
+        document.getElementById('menses-active').classList.toggle('active', type === 'active');
+        resetResult();
+    }
+    function resetResult() {
+        document.getElementById('result-panel').style.display = "none";
+        document.getElementById('error-box').style.display = "none";
+    }
+    function formatDate(dateObj) {
+        let d = dateObj.getDate().toString().padStart(2, '0');
+        let m = (dateObj.getMonth() + 1).toString().padStart(2, '0');
+        let y = dateObj.getFullYear();
+        return `${d}/${m}/${y}`;
+    }
+    function calculateIddah() {
+        const errorBox = document.getElementById('error-box');
+        const resultPanel = document.getElementById('result-panel');
+        const txtResult = document.getElementById('txt-final-result');
+        const notesBox = document.getElementById('box-jurisprudence-notes');
+        errorBox.style.display = "none";
+        const dateInput = document.getElementById('event-date').value;
+        if(!iddahType || !dateInput) { showValidationFailure(); return; }
+        if(iddahType === 'divorce') {
+            if(khilwat === null) { showValidationFailure(); return; }
+            if(khilwat === true) {
+                if(pregnancy === null) { showValidationFailure(); return; }
+                if(pregnancy === false && menses === null) { showValidationFailure(); return; }
+            }
+        }
+        function showValidationFailure() {
+            errorBox.innerText = langData[currentLang].error;
+            errorBox.style.display = "block";
+        }
+        let baseDate = new Date(dateInput);
+        let finalTxt = "";
+        notesBox.classList.add('hidden');
+        if(iddahType === 'death') {
+            baseDate.setDate(baseDate.getDate() + 130);
